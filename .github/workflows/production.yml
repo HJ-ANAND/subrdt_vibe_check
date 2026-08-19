@@ -1,0 +1,16 @@
+name: Register Production Deployment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  production:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Production
+      url: https://www.reddit.com/r/subrdit_vibe_chec_dev
+
+    steps:
+      - name: Confirm deployment
+        run: echo "Production is live"
